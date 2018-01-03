@@ -1,0 +1,93 @@
+body{
+  font-family: Jockey one;
+  background-color: #2C3335;
+  color:white;
+}
+
+.myHeader{
+  padding: 10px;
+  background-color: #1D2021;
+  color:#0AB5D4;
+  padding-top: 25px;
+}
+
+h1{
+  font-size: 50px;
+}
+
+#box{
+  background:#2b3438;
+  padding: 10px;
+  border-radius:12px;
+  color:#c0ddea;
+}
+
+#box1{
+transition: .5s;
+opacity: 1;
+  border:1px;
+  border-style:solid;
+  border-radius:20px;
+    border-color: #98A0A2;
+}
+.box1{
+transition: .5s;
+opacity: 1;
+  border:1px;
+  border-style:solid;
+  border-radius:20px;
+    border-color: #98A0A2;
+padding:20px;
+
+}
+
+.box1:hover:{
+  opacity: 0.6;
+}
+
+.box1:hover {
+  background-color: #202627;
+  color:white;
+  transform:scale(1.1);
+  padding:20px;
+}
+
+#box1:hover:{
+  opacity: 0.6;
+}
+
+.boxin{
+transition: .5s;
+opacity: 1;
+  border:1px;
+  border-style:solid;
+  border-radius:20px;
+    border-color: #98A0A2;
+    
+}
+
+.boxin:hover:{
+  opacity: 0.6;
+}
+
+.boxin:hover {
+  background-color: #202627;
+  color:white;
+  transform:scale(1.05);
+  padding:20px;
+  width: 80%;
+}
+
+
+
+input{
+  border-radius:10px;
+  border:2px;
+  margin:5px;
+
+text-align: center;
+}
+
+.text-center {
+    text-align: center!important;
+}
