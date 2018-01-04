@@ -41,7 +41,8 @@ clear: right;}
 
 .navbar-nav>li>a
 {
-	color: #ffffff !important;}
+	color: #ffffff !important;
+}
 
 .navbar-collapse
 {padding-left: 30px;
@@ -54,3 +55,4 @@ margin-right: -15px;
 @media (min-width: 768px){
 	.navbar-collapse.collapse{display: none;}
 }
+.navbar-nav>li:hover{background-color: #86d3f9;}
