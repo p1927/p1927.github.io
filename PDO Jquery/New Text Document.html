@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
+    crossorigin="anonymous">
+
+<link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" 
+    integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" 
+    crossorigin="anonymous">
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+  
+<h3>Add Profile</h3>
+<br><p class="err"></p><br>
+<form action="add.php" method="post">
+<p>First Name:
+<input type="text" name="first_name" size="60"/></p>
+<p>Last Name:
+<input type="text" name="last_name" size="60"/></p>
+<p>Email:
+<input type="text" name="email" size="30"/></p>
+<p>Headline:<br/>
+<input type="text" name="headline" size="80"/></p>
+<p>Summary:<br/>
+<textarea name="summary" rows="5" cols="80"></textarea>
+<section id="plus"></section>
+<p>Position :  <button type="button" id="btnplus" class="btn btn-default">
+    <span class="glyphicon glyphicon-plus"></span>
+  </button></p>
+<p>
+<input type="submit" value="Add" onclick="validate();>
+<input type="submit" name="cancel" value="Cancel">
+</p>
+</form>
+</div>
+<style>
+.err{ color:red;
+  background-color: lightgrey;
+}
+ 
+</style>
+<script>
+var operation=0;
+var index=0;
+
+function divremover(i){
+document.getElementById('pos['+i+']').remove();
+};
+
+$('#btnplus').click(function(){
+if (operation<9)
+{ index++;
+  $('#plus').append(
+"<div id=\"pos["
++index+
+"]\"><p>Year: <input type=\"text\" name=\"year["
++index+
+"]\" size=\"40\"/>  <button type=\"button\" id=\"btnminus["
++index+
+"]\" onclick=\"divremover("+index+"); return false;\" class=\"btn btn-default\"><span class=\"glyphicon glyphicon-minus\"></span>   </button> </p> <p> <textarea name=\"desc["
++index+
+"]\" rows=\"5\" cols=\"80\"></textarea></p></div>"
+);
+
+  operation++;
+ }
+else { alert("Maximum of nine position entries exceeded");}
+
+});
+
+
+</script>
+
+</body>
